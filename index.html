@@ -14,71 +14,118 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var checkScrollBar = function(){
+                    $('.navbar').css({
+                        backgroundColor: $(this).scrollTop() > 76 ?
+                            'rgba(0,0,0, 0.3)' : 'transparent'
+                    })
+                }
+                $(window).on('load resize scroll', checkScrollBar)
+            });
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container-fluid bg-night">
-            <header>
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg">
-                        <a href="" class="navbar-brand logo-text">My site</a>
-                
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+        <header class="container-fluid header-bg ">
+            <nav class="navbar navbar-expand-md fixed-top container">
+                <a href="#" class="navbar-brand logo-text">Resume</a>
 
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarmenu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link menu-item">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Portfolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+                    <span class="navbar-toggler-icon custom-toggler"></span>
+                </button>
 
-                    </nav>
-                </div>     
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 offset-sm-2">
-                            <p class="text-center welcome">Welcome to my site</p>
-                        </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+                    <div class="navbar-nav">
+                        <a href="#" class="nav-item nav-link menu-item active">About</a>
+                        <a href="#" class="nav-item nav-link menu-item">Services</a>
+                        <a href="#" class="nav-item nav-link menu-item">Portfolio</a>
+                        <a href="#" class="nav-item nav-link menu-item">Contacts</a>
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <p class="text-center greeting">It's nice to meet you</p>
-                        </div>
-                    </div>
+            </nav>
+            
+            <div class="container d-flex flex-column justify-content-center align-items-center header-container">
+                <div class="row">
+                    <h1 class="text-center author">Anton Skvortsov</h1>
                 </div>
-
-                <div class="container tell-me-more">
-                    <div class="row">
-                        <div class="col-sm-4 offset-sm-4">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Tell me more</button>
-                        </div>
-                    </div>
+                <div class="row">
+                    <h3 class="text-center role">Front end developer</h3>
                 </div>
+                <button type="button" class="btn btn-lg btn-primary tell-me-more">Tell me more</button>
+            </div>
+        
+        </header>
 
-            </header>
+        <div class="container">
+            <img src="./images/header.png" alt="" style="width: 400px; height: 2000px">
         </div>
 
+        <!--
+        <div class="container-fluid">
+            <div class="wrapper">
+                <nav class="navbar navbar-expand-lg">
+                    <a href="" class="navbar-brand logo-text">Astro</a>
+            
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarmenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link menu-item">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link menu-item">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link menu-item">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link menu-item">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link menu-item">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>     
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 offset-sm-2">
+                        <p class="text-center welcome">Welcome to my site</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center greeting">It's nice to meet you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container tell-me-more">
+                <div class="row">
+                    <div class="col-sm-4 offset-sm-4">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Tell me more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-container position-absolute"></div>
+
+    -->
 
         <!-- 
             <div class="row">

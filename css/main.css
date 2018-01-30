@@ -20,22 +20,33 @@
     src: url('./fonts/DroidSerif-Italic.ttf');
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
     font-family: 'montserrat-regular';
     font-size: 14pt;
+    height: 100%;
+    width: 100%;
 }
 
-.bg-night {
-    background-image: url('../images/big-header.png');
-    height: 700px;
+.header-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/header-bg.png');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center;
+    height: 100%;
 }
 
 .logo-text {
     font-family: 'wisdom';
     font-size: 26pt;
-    color: yellow;
+    color: #ffffff;
+}
+
+.custom-toggler {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .menu-item {
@@ -44,25 +55,25 @@ body {
     font-size: 12pt;
 }
 
-.welcome {
-    font-family: 'droidserif-italic';
-    font-size: 32pt;
-    color: #ffffff;
-    margin-top: 188px;
-    letter-spacing: 0.025em;
+.header-container {
+    height:calc(100% - 77px); 
 }
 
-.greeting {
+.author {
     font-family: 'montserrat-bold';
-    font-size: 54pt;
+    font-size: 50pt;
     color: #ffffff;
     text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.role {
+    color: #ffffff;
     letter-spacing: 0.0001em;
-    margin-top: -5px;
 }
 
 .tell-me-more {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .tell-me-more button {
