@@ -30,6 +30,7 @@ body {
     font-size: 14pt;
     height: 100%;
     width: 100%;
+    background-color: #f9f9f9;
 }
 
 .header-bg {
@@ -84,3 +85,42 @@ body {
     height: 65px;
     background-color: yellow;
 }
+
+.section {
+    height: 992px;
+    padding: 35px 0px;
+}
+
+.regular-title {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.bold-title {
+    font-family: 'montserrat-bold';
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.about h2 {
+    font-size: 28pt;
+}
+
+.about h3 {
+    font-size: 20pt;
+    padding: 15px 0px;
+}
+
+.vert-pad-20 {
+    padding: 30px 0px;
+}
+
+
+
+
+
+
+
+
