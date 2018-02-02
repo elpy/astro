@@ -27,10 +27,14 @@ html {
 
 body {
     font-family: 'montserrat-regular';
-    font-size: 14pt;
+    font-size: 12pt;
     height: 100%;
     width: 100%;
     background-color: #f9f9f9;
+}
+
+.primary-font-bold {
+    font-family: 'montserrat-bold';
 }
 
 .header-bg {
@@ -38,6 +42,25 @@ body {
     background-size: cover;
     background-position: center;
     height: 100%;
+}
+
+.navbar-toggled {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 5px 5px rgb(238, 238, 238);
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 50px;
+}
+
+.avatar div {
+    font-family: 'montserrat-regular';
+    font-size: 9pt;
 }
 
 .logo-text {
@@ -86,9 +109,16 @@ body {
     background-color: yellow;
 }
 
-.section {
-    height: 992px;
-    padding: 35px 0px;
+.section-light {
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.section-dark {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/notebook.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    color: white;
 }
 
 .regular-title {
@@ -99,7 +129,6 @@ body {
 
 .bold-title {
     font-family: 'montserrat-bold';
-    color: #555;
     text-transform: uppercase;
     letter-spacing: 0.001em;
 }
@@ -113,12 +142,22 @@ body {
     padding: 15px 0px;
 }
 
-.vert-pad-20 {
-    padding: 30px 0px;
+
+/******** skills *********/
+.skills p {
+    font-size: 13pt;
 }
 
+.skills span {
+    font-size: 11pt;
+}
 
+.skills i {
+    font-size: 2em;
+    margin-top: 3px;
+}
 
+/*************************/
 
 
 
