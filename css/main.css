@@ -149,7 +149,7 @@ body {
 }
 
 .skills span {
-    font-size: 11pt;
+    font-size: 12pt;
 }
 
 .skills i {
@@ -160,6 +160,24 @@ body {
 /*************************/
 
 
+/******* portfolio *******/
 
+.filters button {
+    text-transform: uppercase;
+    margin: 0px 5px;
 
+}
 
+.mixitup-control-active {
+    background-color: #000 !important;
+    color: #fff;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.project-overlay {
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.5)
+}
+
+/*************************/
