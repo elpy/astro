@@ -14,83 +14,261 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/main.css">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var checkScrollBar = function(){            
+                    $('.navbar').toggleClass( "navbar-light navbar-toggled", $(this).scrollTop() > $( window ).height())
+                }
+                $(window).on('load resize scroll', checkScrollBar)
+            });
+        </script>
+
     </head>
-    <body>
+    <body lang="ru-ru">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="container-fluid bg-night">
-            <header>
+        <header class="container-fluid header-bg">
+            <nav class="navbar navbar-expand-md fixed-top container-fluid">
                 <div class="container">
-                    <nav class="navbar navbar-expand-lg">
-                        <a href="" class="navbar-brand logo-text">My site</a>
-                
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarmenu">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarmenu">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a href="#" class="nav-link menu-item">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Portfolio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link menu-item">Contact</a>
-                                </li>
-                            </ul>
+                    <a href="#" class="navbar-brand logo-text avatar">
+                        <div class="d-flex align-items-center">
+                            <img src="./images/me.png" alt="my photo">
+                            <div class="ml-1">
+                                <div class="text-uppercase">Антон скворцов</div>
+                                <div class="text-uppercase">Front end/mobile</div>
+                            </div>
                         </div>
+                    </a>
 
-                    </nav>
-                </div>     
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 offset-sm-2">
-                            <p class="text-center welcome">Welcome to my site</p>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu">
+                        <span class="navbar-toggler-icon custom-toggler"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-end" id="navmenu">
+                        <div class="navbar-nav">
+                            <a href="#" class="nav-item nav-link menu-item active">Обо мне</a>
+                            <a href="#" class="nav-item nav-link menu-item">Услуги</a>
+                            <a href="#" class="nav-item nav-link menu-item">Навыки</a>                        
+                            <a href="#" class="nav-item nav-link menu-item">Проекты</a>
+                            <a href="#" class="nav-item nav-link menu-item">Контакты</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <p class="text-center greeting">It's nice to meet you</p>
-                        </div>
-                    </div>
+            </nav>
+            
+            <div class="container d-flex flex-column justify-content-center align-items-center header-container">
+                <div class="row">
+                    <h1 class="text-center author">Антон Скворцов</h1>
                 </div>
-
-                <div class="container tell-me-more">
-                    <div class="row">
-                        <div class="col-sm-4 offset-sm-4">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Tell me more</button>
-                        </div>
-                    </div>
+                <div class="row">
+                    <h3 class="text-center role">Web и mobile разработчик</h3>
                 </div>
+                <button type="button" class="btn btn-lg btn-primary tell-me-more">Подробнее</button>
+            </div>
+        
+        </header>
 
-            </header>
-        </div>
+        <div class="my-4">&nbsp;</div>
 
-
-        <!-- 
-            <div class="row">
-                <div class="col-6">Some title</div>
-                <div class="col-6">About Services Contacts</div>
-                
+        <!-- About me -->
+        <section class="my-5 py-5 section-light">
+            <div class="container d-flex justify-content-center">
+                <h2 class="bold-title">Обо мне</h2>
             </div>
 
-            <img src="./images/header.png" class="img-fluid" alt="header image">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="regular-title">Кто я?</h3>
+                        <p class="text-justify">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est? Libero dolore ipsam pariatur sequi veritatis minima, porro odio tempore distinctio sapiente neque.
+                        </p>
+                        <p class="text-justify">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est?
+                        </p>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <h3 class="regular-title">Чем занимаюсь?</h3>
+                        <p class="text-justify">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est? Libero dolore ipsam pariatur sequi veritatis minima, porro odio tempore distinctio sapiente neque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 d-flex align-self-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Образование</h5>
+
+                                <div class="card-text">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="m-0 primary-font-bold text-uppercase">Омгту</p>
+                                            <p >2001-2007</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
+                                            <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 d-flex align-self-stretch">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-uppercase">Опыт работы</h5>
+
+                                <div class="card-text">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="m-0 primary-font-bold text-uppercase">Lorem ipsum</p>
+                                            <p >2008-2012</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
+                                            <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                                <div class="card-text">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p class="m-0 primary-font-bold text-uppercase">Lorem ipsum</p>
+                                                <p >2012-2018</p>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
+                                                <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
+                                            </div>
+                                        </div>                                   
+                                    </div>                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- What i do -->
+        <section class="container-fluid my-5 py-5 section-dark">
+            <div class="container d-flex justify-content-center">
+                <h2 class="bold-title m-5">Мои навыки</h2>
+            </div>
+
+            <div class="container">
+                <div class="row skills">
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fas fa-camera-retro"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-sm-2">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                                <span>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                                                                                   
 
 
-        -->
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+
+
 
     </body>
 </html>

@@ -20,22 +20,57 @@
     src: url('./fonts/DroidSerif-Italic.ttf');
 }
 
-body {
-    font-family: 'montserrat-regular';
-    font-size: 14pt;
+html {
+    height: 100%;
+    width: 100%;
 }
 
-.bg-night {
-    background-image: url('../images/big-header.png');
-    height: 700px;
+body {
+    font-family: 'montserrat-regular';
+    font-size: 12pt;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.primary-font-bold {
+    font-family: 'montserrat-bold';
+}
+
+.header-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/header-bg.png');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center;
+    height: 100%;
+}
+
+.navbar-toggled {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 5px 5px rgb(238, 238, 238);
+}
+
+.avatar img {
+    width: 48px;
+    height: 50px;
+    border-width: 1px;
+    border-color: red;
+    border-radius: 50px;
+}
+
+.avatar div {
+    font-family: 'montserrat-regular';
+    font-size: 9pt;
 }
 
 .logo-text {
     font-family: 'wisdom';
     font-size: 26pt;
-    color: yellow;
+    color: #ffffff;
+}
+
+.custom-toggler {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .menu-item {
@@ -44,25 +79,25 @@ body {
     font-size: 12pt;
 }
 
-.welcome {
-    font-family: 'droidserif-italic';
-    font-size: 32pt;
-    color: #ffffff;
-    margin-top: 188px;
-    letter-spacing: 0.025em;
+.header-container {
+    height:calc(100% - 77px); 
 }
 
-.greeting {
+.author {
     font-family: 'montserrat-bold';
-    font-size: 54pt;
+    font-size: 50pt;
     color: #ffffff;
     text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.role {
+    color: #ffffff;
     letter-spacing: 0.0001em;
-    margin-top: -5px;
 }
 
 .tell-me-more {
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .tell-me-more button {
@@ -73,3 +108,58 @@ body {
     height: 65px;
     background-color: yellow;
 }
+
+.section-light {
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.section-dark {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/notebook.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    color: white;
+}
+
+.regular-title {
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.bold-title {
+    font-family: 'montserrat-bold';
+    text-transform: uppercase;
+    letter-spacing: 0.001em;
+}
+
+.about h2 {
+    font-size: 28pt;
+}
+
+.about h3 {
+    font-size: 20pt;
+    padding: 15px 0px;
+}
+
+
+/******** skills *********/
+.skills p {
+    font-size: 13pt;
+}
+
+.skills span {
+    font-size: 11pt;
+}
+
+.skills i {
+    font-size: 2em;
+    margin-top: 3px;
+}
+
+/*************************/
+
+
+
+
+
