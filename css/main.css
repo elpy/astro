@@ -121,6 +121,13 @@ body {
     color: white;
 }
 
+.section-contact {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/wooden-table.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    color: white;
+}
+
 .regular-title {
     color: #555;
     text-transform: uppercase;
@@ -202,6 +209,23 @@ body {
 
 .project-desc h3 {
     font-weight: bold;
+}
+
+/*************************/
+
+
+
+
+/******* portfolio *******/
+
+.contact-text {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+    margin: 0px;
 }
 
 /*************************/
