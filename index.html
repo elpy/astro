@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js" integrity="sha256-JvxCtlCm5uJZUBjxsqJf6Vh3GY/uzKdmw9BnDNQFZE4=" crossorigin="anonymous"></script>
@@ -26,24 +26,38 @@
                 }
                 $(window).on('load resize scroll', checkScrollBar);
 
-                mixitup($('#portfolio'));
-            });
+                mixitup($('#portfolio'), {
+                    selectors: { control: '[data-mixitup-control]' }
+                });
 
-            
+                $("a").on('click', function(event) {
+                    console.log('this', this.dataset)
+                    if (this.hash !== "" && this.dataset.smooth) {
+                        event.preventDefault();
+                        var hash = this.hash;
+                
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });           
         </script>
 
     </head>
-    <body lang="ru-ru">
+    <body lang="ru-ru" data-spy="scroll" data-target="#nav">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header class="container-fluid header-bg">
-            <nav class="navbar navbar-expand-md fixed-top container-fluid">
+            <nav class="navbar navbar-expand-md fixed-top container-fluid" id="nav">
                 <div class="container">
-                    <a href="#" class="navbar-brand logo-text avatar">
+                    <a href="#" data-smooth="1" class="navbar-brand avatar-class">
                         <div class="d-flex align-items-center">
                             <img src="./images/me.png" alt="my photo">
-                            <div class="ml-1">
+                            <div class="ml-2">
                                 <div class="text-uppercase">Антон скворцов</div>
                                 <div class="text-uppercase">Front end/mobile</div>
                             </div>
@@ -56,11 +70,10 @@
 
                     <div class="collapse navbar-collapse justify-content-end" id="navmenu">
                         <div class="navbar-nav">
-                            <a href="#" class="nav-item nav-link menu-item active">Обо мне</a>
-                            <a href="#" class="nav-item nav-link menu-item">Услуги</a>
-                            <a href="#" class="nav-item nav-link menu-item">Навыки</a>                        
-                            <a href="#" class="nav-item nav-link menu-item">Проекты</a>
-                            <a href="#" class="nav-item nav-link menu-item">Контакты</a>
+                            <a href="#about" data-smooth="2" class="nav-item nav-link menu-item active">Обо мне</a>
+                            <a href="#skills" data-smooth="3" class="nav-item nav-link menu-item">Услуги</a>
+                            <a href="#projects" data-smooth="4" class="nav-item nav-link menu-item">Проекты</a>
+                            <a href="#contacts" data-smooth="5" class="nav-item nav-link menu-item">Контакты</a>
                         </div>
                     </div>
                 </div>
@@ -73,12 +86,16 @@
                 <div class="row">
                     <h3 class="text-center role">Web и mobile разработчик</h3>
                 </div>
-                <button type="button" class="btn btn-lg btn-primary tell-me-more">Подробнее</button>
+                <a href="#about" data-smooth="6">
+                    <div class="btn btn-lg btn-primary tell-me-more">Подробнее</div>
+                </a>
             </div>
         </header>
 
+        <div class="container mb-5" id="about">&nbsp;</div>
+
         <!-- About me -->
-        <section class="my-5 py-5 section-light">
+        <section class="py-5 section-light">
             <div class="container d-flex justify-content-center">
                 <h2 class="bold-title">Обо мне</h2>
             </div>
@@ -164,9 +181,10 @@
             </div>
         </section>
 
-        
+        <div class="container mb-5" id="skills">&nbsp;</div>
+
         <!-- What i do -->
-        <section class="container-fluid my-5 py-5 section-dark">
+        <section class="container-fluid py-5 section-dark">
             <div class="container d-flex justify-content-center">
                 <h2 class="bold-title m-5">Мои навыки</h2>
             </div>
@@ -262,6 +280,8 @@
             </div>
         </section>
 
+        <div class="container mb-5" id="projects">&nbsp;</div>
+
         <!-- Last projects -->
         <section class="container-fluid section-light">
             <div class="container d-flex justify-content-center">
@@ -271,15 +291,15 @@
             <div class="container my-4">
                 <div class="row d-flex justify-content-center">
                     <div class="btn-group filters">
-                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-filter="all">Все</li>
-                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-filter=".web">web</li>
-                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-filter=".mobile">mobile</li>
+                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-mixitup-control data-filter="all">Все</li>
+                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-mixitup-control data-filter=".web">web</li>
+                        <button type="button" class="btn btn-outline-dark btn-lg filter" data-mixitup-control data-filter=".mobile">mobile</li>
                     </div>
                 </div>
             </div>
     
             <div class="container">
-                <div class="row my-5" id="portfolio" class="">
+                <div class="row my-4" id="portfolio" class="">
                     <div class="col-md-4 col-sm-6 my-3 mix web mobile" data-bound="" >
                         <div class="project">
                             <a href="" class="">
@@ -288,9 +308,10 @@
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>АСУ СС МЕЛСТОН</h3>
                                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <a href="">
-                                    <div class="btn btn-outline-light">ПОДРОБНЕЕ</div>
-                                </a>
+                                
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#melstondetails">
+                                    ПОДРОБНЕЕ
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -374,6 +395,8 @@
             </div>
         </section>
 
+        <div class="container mb-5" id="contacts">&nbsp;</div>
+
         <!-- Contacts -->
         <section class="container-fluid my-5 py-5 section-contact">
             <div class="container d-flex justify-content-center">
@@ -391,7 +414,6 @@
                                 <img src="./images/icons/vk.png" alt="" class="contact-icon">
                                 <img src="./images/icons/facebook.png" alt="" class="contact-icon">                         
                                 <img src="./images/icons/linkedin.png" alt="" class="contact-icon">
-                                <img src="./images/icons/hh.png" alt="" class="contact-icon">
                                 <img src="./images/icons/telegram.png" alt="" class="contact-icon">
                                 <img src="./images/icons/skype.png" alt="" class="contact-icon">
                             </div>
@@ -426,7 +448,104 @@
             </div>
         </section>
 
+        <!-- Copyright-->
+        <section class="container-fluid section-light my-5 py-5">
+            <div class="container">
+                <p>Copyright © 2017 Astro. All Rights Reserved.</p>
+            </div>
+        </section>
 
+        <!-- melston details -->
+        <div class="modal fade" id="melstondetails" tabindex="-1" role="dialog" aria-labelledby="melston details" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h4 class="modal-title primary-font-bold">АСУ СС Мелстон-сервис</h4>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <img src="./projects/melston/phones.png" class="img-responsive melston-phones" alt="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="text-center">Описание проекта</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia maxime ullam modi beatae, facilis ipsum eligendi ipsa, quidem consequatur dolore expedita. Harum quae eum dolorum nulla mollitia possimus nobis aliquam!</p>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-sm-3 text-center"><h2>50 000</h2><p>заявок в месяц</p></div>
+                                <div class="col-sm-3 text-center"><h2>1200</h2><p>сервисных инженеров</p></div>
+                                <div class="col-sm-3 text-center"><h2>120</h2><p>подрядных организаций</p></div>
+                                <div class="col-sm-3 text-center"><h2>22</h2><p>региона России и СНГ</p></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="text-center">СМИ о проекте</h4>
+                                    <p>
+                                        «В результате проекта мы получили единый инструмент управления облачной и локальной инфраструктурой и дополнительно повысили надежность и отказоустойчивость нашей инфраструктуры до уровня 99,9%: все коммуникационные сервисы остаются доступны для всех регионов и всех удаленных пользователей даже при отключении нашего дата-центра», – говорит директор по информационным технологиям группы компаний «Мелстон» Андрей Балякин.
+                                        <a href="http://business.cnews.ru/articles/2016-04-20_oblaka_i_mobilnost_ekonomyat_milliony">Подробнее</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    стэк, роли и т.д.
+                                </div>
+                            </div>
+
+                            <div class="row my-4">
+                                <div class="col-sm-12">
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block melston-carousel-image" src="./projects/melston/tickets.png" alt="First slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block melston-carousel-image" src="./projects/melston/tickets.png" alt="Second slide">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block melston-carousel-image" src="./projects/melston/tickets.png" alt="Third slide">
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row my-4">
+                                <div class="col">
+                                    <h4 class="text-center">Рекламная презентация заказчика</h4>
+                                    <a href="http://docplayer.ru/50399451-Avtomatizirovannaya-sistema-upravleniya-kompanii-melston-servis-golaya-pravda.html">
+                                        Автоматизированная Система Управления компании Мелстон-Сервис. Голая правда.
+                                    </a>        
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-footer bg-dark text-white">
+                        <button type="button" class="btn btn-light btn-lg" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
