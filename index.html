@@ -16,6 +16,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.min.js" integrity="sha256-JvxCtlCm5uJZUBjxsqJf6Vh3GY/uzKdmw9BnDNQFZE4=" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/media.css">
         <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
         <script type="text/javascript">
@@ -43,7 +45,23 @@
                         });
                     }
                 });
-            });           
+            });  
+
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    var forms = document.getElementsByClassName('needs-validation');
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();         
         </script>
 
     </head>
@@ -51,7 +69,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="container-fluid header-bg">
+        <header class="container-fluid header-bg d-flex">
             <nav class="navbar navbar-expand-md fixed-top container-fluid" id="nav">
                 <div class="container">
                     <a href="#" data-smooth="1" class="navbar-brand avatar-class">
@@ -71,7 +89,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navmenu">
                         <div class="navbar-nav">
                             <a href="#about" data-smooth="2" class="nav-item nav-link menu-item active">Обо мне</a>
-                            <a href="#skills" data-smooth="3" class="nav-item nav-link menu-item">Услуги</a>
+                            <a href="#skills" data-smooth="3" class="nav-item nav-link menu-item">Навыки</a>
                             <a href="#projects" data-smooth="4" class="nav-item nav-link menu-item">Проекты</a>
                             <a href="#contacts" data-smooth="5" class="nav-item nav-link menu-item">Контакты</a>
                         </div>
@@ -79,15 +97,15 @@
                 </div>
             </nav>
             
-            <div class="container d-flex flex-column justify-content-center align-items-center header-container">
+            <div class="container d-flex flex-column justify-content-center align-items-center header-title">
                 <div class="row">
-                    <h1 class="text-center author">Антон Скворцов</h1>
+                    <h1 class="text-center">Антон Скворцов</h1>
                 </div>
                 <div class="row">
-                    <h3 class="text-center role">Web и mobile разработчик</h3>
+                    <h3 class="text-center">Web и mobile разработчик</h3>
                 </div>
-                <a href="#about" data-smooth="6">
-                    <div class="btn btn-lg btn-primary tell-me-more">Подробнее</div>
+                <a href="#about" data-smooth="6" class="mt-4">
+                    <div class="btn btn-lg btn-primary">Подробнее</div>
                 </a>
             </div>
         </header>
@@ -97,7 +115,7 @@
         <!-- About me -->
         <section class="py-5 section-light">
             <div class="container d-flex justify-content-center">
-                <h2 class="bold-title">Обо мне</h2>
+                <h2 class="primary-font-bold text-uppercase">Обо мне</h2>
             </div>
 
             <div class="container mt-5">
@@ -105,17 +123,22 @@
                     <div class="col-sm-12 col-md-6">
                         <h3 class="regular-title">Кто я?</h3>
                         <p class="text-justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est? Libero dolore ipsam pariatur sequi veritatis minima, porro odio tempore distinctio sapiente neque.
+                            Привет, меня зовут Антон, я программист. Мне 34 года и на протяжении последних 10 лет я занимаюсь созданием ПО. 
+                            За это время я успел попробовать себя в самых различных направлениях, но решил остановиться на веб и мобильной разработке.
+                            Работать предпочитаю в команде, но удаленно, дабы не ограничивать себя одним местоположением.
                         </p>
                         <p class="text-justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est?
+                            В свободное время люблю кататься на сноуборде, велотуры, походный отдых и всякие другие интересные интересности.
                         </p>
                     </div>
 
                     <div class="col-sm-12 col-md-6">
                         <h3 class="regular-title">Чем занимаюсь?</h3>
                         <p class="text-justify">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum doloremque et beatae amet veniam odit omnis est? Libero dolore ipsam pariatur sequi veritatis minima, porro odio tempore distinctio sapiente neque.
+                            Разрабатываю мобильные приложения под Android и iOS (react-native), а так же веб сайты(react, bootstrap и др.). 
+                            Работаю как на стороне frontend, так и в роли backend разработчика. 
+                            Имею очень большой опыт работы с базами данных (sql server).
+                            В своей работе использую различные системы для тестирования качества ПО (юнит-тестирование, интеграционные тесты), а также TDD методику.
                         </p>
                     </div>
                 </div>
@@ -135,8 +158,9 @@
                                             <p >2001-2007</p>
                                         </div>
                                         <div class="col-md-8">
-                                            <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
-                                            <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
+                                            <p class="mb-1 primary-font-bold text-uppercase">Инженер-программист</p>
+                                            <p>Факультет информационных технологий и компьютерных систем</p>
+                                            <p>Разработка программного обеспечения, систем обработки информации и управления</p>
                                         </div>
                                     </div>                                   
                                 </div>
@@ -152,27 +176,43 @@
                                 <div class="card-text">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <p class="m-0 primary-font-bold text-uppercase">Lorem ipsum</p>
-                                            <p >2008-2012</p>
+                                            <p class="m-0 primary-font-bold text-uppercase">ООО Альтсофт</p>
+                                            <p >2018-2012</p>
                                         </div>
                                         <div class="col-md-8">
-                                            <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
-                                            <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
+                                            <p class="mb-1 primary-font-bold text-uppercase">Ведущий full stack разработчик</p>
+                                            <p>
+                                                Разработал более 30 программных решений (frontend/mobile/backend). Занимался анализом требований, проектированием архитектуры, разработкой, тестированием. Решением вопросов производительности, диагностики и безопасности.
+                                            </p>
                                         </div>
                                     </div>                                   
                                 </div>
                                 <div class="card-text">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p class="m-0 primary-font-bold text-uppercase">Lorem ipsum</p>
-                                                <p >2012-2018</p>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <p class="mb-1 primary-font-bold text-uppercase">Lorem ipsum</p>
-                                                <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi dolor, vel porro pariatur consequuntur, consequatur architecto!</p>
-                                            </div>
-                                        </div>                                   
-                                    </div>                                
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="m-0 primary-font-bold text-uppercase">ООО Альтсофт</p>
+                                            <p >2012-2008</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="mb-1 primary-font-bold text-uppercase">Web-разработчик</p>
+                                            <p class="">
+                                                Разработка backend'a для различных проектов, написание тестов, решение вопросов производительности.
+                                            </p>
+                                        </div>
+                                    </div>                                   
+                                </div>  
+                                <div class="card-text">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="m-0 primary-font-bold text-uppercase">Freelance</p>
+                                            <p >2005-2006</p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="mb-1 primary-font-bold text-uppercase">Web-разработчик</p>
+                                            <p>Разрабатывал программный комплекс (web + desktop) для реэлторских агенств города Омск.</p>
+                                        </div>
+                                    </div>                                   
+                                </div>                                
                             </div>
                         </div>
                         
@@ -186,7 +226,7 @@
         <!-- What i do -->
         <section class="container-fluid py-5 section-dark">
             <div class="container d-flex justify-content-center">
-                <h2 class="bold-title m-5">Мои навыки</h2>
+                <h2 class="primary-font-bold text-uppercase my-5">Мои навыки</h2>
             </div>
 
             <div class="container">
@@ -194,13 +234,13 @@
 
                     <div class="col-md-4 col-sm-6 p-4">
                         <div class="row align-top">
-                            <div class="col-sm-2">
-                                <i class="fas fa-home"></i>
+                            <div class="col-2">
+                                <i class="fa fa-mobile"></i>
                             </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Mobile</p>
                                 <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                    Разрабатываю мобильные приложения под android и iOS на <b>react-native</b> (<b>redux, immutable, axios, redux-thunk, saga, expo</b> и многие другие плюшки)
                                 </span>
                             </div>
                         </div>
@@ -208,13 +248,13 @@
 
                     <div class="col-md-4 col-sm-6 p-4">
                         <div class="row align-top">
-                            <div class="col-sm-2">
-                                <i class="fas fa-magic"></i>
+                            <div class="col-2">
+                                <i class="fa fa-globe"></i>
                             </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Frontend</p>
                                 <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                    В разработке SPA использую <b>react</b> и необходимые технологии в его экосистеме: <b>redux, immutable, reselect, redux-thunk, saga, react-router-redux, webpack</b> и др. <b>ES6, Babel</b>
                                 </span>
                             </div>
                         </div>
@@ -222,59 +262,47 @@
 
                     <div class="col-md-4 col-sm-6 p-4">
                         <div class="row align-top">
-                            <div class="col-sm-2">
+                            <div class="col-2">
+                                <i class="fa fa-wrench"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Backend</p>
+                                <span>
+                                    Серверную часть пишу на <b>ASP.NET/ASP.NET Core, MS SQL Server/PostgreSQL, EF/NHibernate</b>. Осваиваю <b>Python</b>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-2">
                                 <i class="fas fa-book"></i>
                             </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Адаптивная верстка</p>
                                 <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                    Верстка с использованием <b>bootstrap</b>, <b>HTML5</b>, <b>CSS3</b>, <b>jQuery</b>
                                 </span>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-md-4 col-sm-6 p-4">
                         <div class="row align-top">
-                            <div class="col-sm-2">
-                                <i class="fas fa-camera-retro"></i>
-                            </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 p-4">
-                        <div class="row align-top">
-                            <div class="col-sm-2">
+                            <div class="col-2">
                                 <i class="fas fa-cog"></i>
                             </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Perfomance</p>
                                 <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
+                                    Профилирование и оптимизация кода, БД. Анализ crash-дампов приложений, планов выполнения запросов, графов дедлоков и многое другое. Reverse engineering/disassemble. 
                                 </span>
                             </div>
                         </div>
-                    </div>
-            
-                    <div class="col-md-4 col-sm-6 p-4">
-                        <div class="row align-top">
-                            <div class="col-sm-2">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <div class="col-sm-10">
-                                <p class="font-weight-bold text-uppercase">Lorem ipsum</p>
-                                <span>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sed perferendis reiciendis praesentium. 
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
+   
 
                 </div>
             </div>
@@ -285,7 +313,7 @@
         <!-- Last projects -->
         <section class="container-fluid section-light">
             <div class="container d-flex justify-content-center">
-                <h2 class="bold-title my-5">Последние проекты</h2>
+                <h2 class="primary-font-bold text-uppercase my-5">Последние проекты</h2>
             </div>
 
             <div class="container my-4">
@@ -307,7 +335,7 @@
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>АСУ СС МЕЛСТОН</h3>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
+                                <p class="text-center">Автоматизированная система управления сервисной службой</p>
                                 
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#melstondetails">
                                     ПОДРОБНЕЕ
@@ -400,15 +428,15 @@
         <!-- Contacts -->
         <section class="container-fluid my-5 py-5 section-contact">
             <div class="container d-flex justify-content-center">
-                <h2 class="bold-title m-5">Контакты</h2>
+                <h2 class="primary-font-bold text-uppercase my-5">Контакты</h2>
             </div>
 
             <div class="container my-5">
                 <div class="row">
 
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <h4>Contact me</h4>
-                        <p class="contact-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi molestias, suscipit ipsum dolores similique delectus !</p>
+                        <h4>Напишите мне</h4>
+                        <p class="contact-text">Если у вас появились какие-нибудь вопросы, вы можете отправить мне сообщение или найти меня в соц. сетях </p>
                         <div class="row">
                             <div class="col-sm-12">
                                 <img src="./images/icons/vk.png" alt="" class="contact-icon">
@@ -422,19 +450,28 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12 col-sm-12">
-                        <form action="">
+                        <form action="" class="needs-validation" novalidate>
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <input type="name" class="form-control form-control-lg" id="input1" placeholder="Ваше имя">
+                                        <input type="name" class="form-control form-control-lg" id="input1" placeholder="Ваше имя" required>
+                                        <div class="invalid-feedback">
+                                            Пожалуйста, заполните ваше имя
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="email" class="form-control form-control-lg" id="input2" placeholder="Email">
-                                    </div>
+                                        <input type="email" class="form-control form-control-lg" id="input2" placeholder="Email" autocomplete="email" required>
+                                        <div class="invalid-feedback">
+                                            Пожалуйста, заполните ваш email
+                                        </div>
+                                       </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col-sm-12">
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Message"></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Сообщение" required></textarea>
+                                        <div class="invalid-feedback">
+                                            Пожалуйста, заполните ваше сообщение
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-end mt-4 mr-1">
@@ -516,43 +553,61 @@
 
                             <div class="row mt-5">
                                 <div class="col-sm-12">
-                                    <h4 class="text-center">Описание проекта</h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia maxime ullam modi beatae, facilis ipsum eligendi ipsa, quidem consequatur dolore expedita. Harum quae eum dolorum nulla mollitia possimus nobis aliquam!</p>
+                                    <h4 class="font-weight-bold">Описание проекта</h4>
+                                    <p>Автоматизированная система управления сервисной службой предназначена для организации работы с заявками на обслуживание от заказчиков. Система решает следующие задачи: 
+                                    <ul>
+                                        <li>Принимает заявки от клиентов посредством web сайта, email сервера или call центра</li>
+                                        <li>Назначает ответственных и передает всю необходимую информацию им в мобильное приложение</li>
+                                        <li>Контролирует получение заявки исполнителем, время выполнения и другие параметры в соответствии с SLA</li>
+                                        <li>Использует NFC карты MIFARE для подписания электронных актов выполненных работ цифровой подписью</li>
+                                        <li>Позволяет в реальном времени работать с геопозицией сервисных специалистов (отслеживать перемещения, искать ближайших и т.д.)</li>
+                                        <li>Формирует различные виды отчетностей для аналитики</li>
+                                    </ul>
                                 </div>
                             </div>
 
-                            <div class="row mt-2">
-                                <div class="col-sm-3 text-center"><h2>50 000</h2><p>заявок в месяц</p></div>
-                                <div class="col-sm-3 text-center"><h2>1200</h2><p>сервисных инженеров</p></div>
-                                <div class="col-sm-3 text-center"><h2>120</h2><p>подрядных организаций</p></div>
-                                <div class="col-sm-3 text-center"><h2>22</h2><p>региона России и СНГ</p></div>
+                            <div class="row mt-4">
+                                <div class="col-sm-3 text-center font-weight-bold"><h2>50 000</h2><p>заявок в месяц</p></div>
+                                <div class="col-sm-3 text-center font-weight-bold"><h2>1200</h2><p>сервисных инженеров</p></div>
+                                <div class="col-sm-3 text-center font-weight-bold"><h2>120</h2><p>подрядных организаций</p></div>
+                                <div class="col-sm-3 text-center font-weight-bold"><h2>22</h2><p>региона России и СНГ</p></div>
                             </div>
 
                             <div class="row mt-4">
                                 <div class="col-sm-12">
-                                    <h4 class="text-center">СМИ о проекте</h4>
+                                    <h4 class="font-weight-bold">Мой вклад</h4>
+                                    <p>Моей задачей была разработка мобильного приложения и backend API для него. Приложение разрабатывалось на платформе WinRT, а для backend'a был выбран ASP.NET MVC и SQL Server.</p>
+                                    Возможности мобильного приложения:
+                                    <ul>
+                                        <li>Работа со своими заявками и заявками своего региона (получение, поиск, фильтрации, передача другому исполнителю, выполнение и др.)</li>
+                                        <li>Заявки на плановое и внеплановое обслуживание, заявки на закупку материалов</li>
+                                        <li>Формирование электронных документов, подписанных цифровой подписью с использованием NFC карт</li>
+                                        <li>Для поддержки работы в оффлайн режиме был разработан собственный протокол обмена информацией на основе версионности строк</li>
+                                        <li>Работа с геопозицией, отображение других сотрудников на карте, поиск ближайших машин с необходимыми запчастями и др.</li>
+                                        <li>Фиксация различной информации с помощью камеры (чеки из магазина, бумажные документы и т.д.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">В СМИ</h4>
                                     <p>
-                                        «В результате проекта мы получили единый инструмент управления облачной и локальной инфраструктурой и дополнительно повысили надежность и отказоустойчивость нашей инфраструктуры до уровня 99,9%: все коммуникационные сервисы остаются доступны для всех регионов и всех удаленных пользователей даже при отключении нашего дата-центра», – говорит директор по информационным технологиям группы компаний «Мелстон» Андрей Балякин.
-                                        <a href="http://business.cnews.ru/articles/2016-04-20_oblaka_i_mobilnost_ekonomyat_milliony">Подробнее</a>
+                                        Более подробно о проекте и достигнутым экономическим эффектам можно почитать в ряде статей:
+                                        <ul>
+                                            <li>
+                                                <a href="http://business.cnews.ru/articles/2016-04-20_oblaka_i_mobilnost_ekonomyat_milliony" target="blank">Облака и мобильность экономят миллионы</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://bizon.lenta.ru/business-solutions/station_service" target="blank">Как ускорить обслуживание АЗС</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://docplayer.ru/50399451-Avtomatizirovannaya-sistema-upravleniya-kompanii-melston-servis-golaya-pravda.html" target="blank">Автоматизированная Система Управления компании Мелстон-Сервис. Голая правда.</a>
+                                            </li>
+                                        </ul> 
                                     </p>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    стэк, роли и т.д.
-                                </div>
-                            </div>
-
-                            <div class="row my-4">
-                                <div class="col">
-                                    <h4 class="text-center">Рекламная презентация заказчика</h4>
-                                    <a href="http://docplayer.ru/50399451-Avtomatizirovannaya-sistema-upravleniya-kompanii-melston-servis-golaya-pravda.html">
-                                        Автоматизированная Система Управления компании Мелстон-Сервис. Голая правда.
-                                    </a>        
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 

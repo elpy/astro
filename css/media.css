@@ -1,0 +1,89 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+    .header-title h1 {
+        font-family: 'montserrat-bold';
+        font-size: 21pt;
+        text-transform: uppercase;
+    }
+
+    .header-title h3 {
+        font-size: 16pt;
+    }
+
+    .melston-carousel-image {
+        width: auto;
+        height: 250px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .header-title h1 {
+        font-family: 'montserrat-bold';
+        font-size: 32pt;
+        text-transform: uppercase;
+    }
+
+    .header-title h3 {
+        font-size: 20pt;
+    }
+
+    .melston-carousel-image {
+        width: auto;
+        height: 450px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .header-title h1 {
+        font-family: 'montserrat-bold';
+        font-size: 48pt;
+        text-transform: uppercase;
+    }
+
+    .header-title h3 {
+        font-size: 24pt;
+    }
+
+    .melston-carousel-image {
+        width: auto;
+        height: 450px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .header-title h1 {
+        font-family: 'montserrat-bold';
+        font-size: 48pt;
+        text-transform: uppercase;
+    }
+
+    .header-title h3 {
+        font-size: 24pt;
+    }
+
+    .melston-carousel-image {
+        width: auto;
+        height: 450px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .header-title h1 {
+        font-family: 'montserrat-bold';
+        font-size: 48pt;
+        text-transform: uppercase;
+    }
+
+    .header-title h3 {
+        font-size: 24pt;
+    }
+
+    .melston-carousel-image {
+        width: auto;
+        height: 450px;
+    }
+}

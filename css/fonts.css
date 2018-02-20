@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url('../fonts/Montserrat-Regular.otf');
+}
+
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.otf');
+}
+
+@font-face {
+    font-family: 'wisdom';
+    src: url('../fonts/Wisdom Script AJ.otf');
+}
+
+@font-face {
+    font-family: 'droidserif-italic';
+    src: url('../fonts/DroidSerif-Italic.ttf');
+}
