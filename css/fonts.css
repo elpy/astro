@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: 'droidserif-regular';
+    src: url('../fonts/DroidSerif-Regular.ttf');
+}
+
+@font-face {
     font-family: 'droidserif-italic';
     src: url('../fonts/DroidSerif-Italic.ttf');
 }

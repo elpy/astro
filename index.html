@@ -297,12 +297,25 @@
                             <div class="col-10">
                                 <p class="font-weight-bold text-uppercase">Perfomance</p>
                                 <span>
-                                    Профилирование и оптимизация кода, БД. Анализ crash-дампов приложений, планов выполнения запросов, графов дедлоков и многое другое. Reverse engineering/disassemble. 
+                                    Профилирование и оптимизация кода, БД. Анализ crash-дампов приложений, планов выполнения запросов, графов дедлоков и многое другое. Reverse engineering/disassemble
                                 </span>
                             </div>
                         </div>
                     </div>                    
    
+                    <div class="col-md-4 col-sm-6 p-4">
+                        <div class="row align-top">
+                            <div class="col-2">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="col-10">
+                                <p class="font-weight-bold text-uppercase">Design</p>
+                                <span>
+                                    Базовые навыки дизайна макетов, работа с Photoshop/Inkscape/Gimp
+                                </span>
+                            </div>
+                        </div>
+                    </div>  
 
                 </div>
             </div>
@@ -366,10 +379,25 @@
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>АСУ БЦ "1 Zhukov"</h3>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <a href="">
-                                    <div class="btn btn-outline-light">ПОДРОБНЕЕ</div>
-                                </a>
+                                <p class="text-center">Система управления заявками на посещение/въезд на территорию бизнес-центра, изготовление пропусков, производство работ</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#zhukovdetails">
+                                    ПОДРОБНЕЕ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 my-3 mix mobile" data-bound="" >
+                        <div class="project">
+                            <a href="" class="">
+                                <img src="./images/fensma.jpg" alt="">
+                            </a>
+                            <div class="project-desc d-flex flex-column justify-content-center align-items-center">
+                                <h3>Согласование счетов</h3>
+                                <p class="text-center">Автоматизированная система организации электронного документооборота для компании "ООО Фенсма"</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#fensmadetails">
+                                    ПОДРОБНЕЕ
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -381,10 +409,10 @@
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>АСУ БЦ iCube</h3>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <a href="">
-                                    <div class="btn btn-outline-light">ПОДРОБНЕЕ</div>
-                                </a>
+                                <p class="text-center">Система ведения заявок арендаторов и УК для бизнес-центра iCube</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#icubedetails">
+                                    ПОДРОБНЕЕ
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -396,10 +424,10 @@
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>Claris BC</h3>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <a href="">
-                                    <div class="btn btn-outline-light">ПОДРОБНЕЕ</div>
-                                </a>
+                                <p class="text-center">Автоматизация управления бизнес центрами для организации работы управляющих компаний по заявкам от арендаторов.</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#clarisbcdetails">
+                                    ПОДРОБНЕЕ
+                                </button>
                            </div>
                         </div>
                     </div>
@@ -412,9 +440,9 @@
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
                                 <h3>Claris</h3>
                                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <a href="">
-                                    <div class="btn btn-outline-light">ПОДРОБНЕЕ</div>
-                                </a>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#icubedetails">
+                                    ПОДРОБНЕЕ
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -498,16 +526,21 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white">
-                        <h4 class="modal-title primary-font-bold">АСУ СС Мелстон-сервис</h4>
+                        <div>
+                            <h4 class="modal-title primary-font-bold">АСУ СС Мелстон-сервис</h4>
+                            <span>#WinRT #Asp.net #SQL Server #Couchbase #Ndef</span>
+                        </div>
+                        
                         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                        
                     </div>
 
                     <div class="modal-body">
                         <div class="container">
 
-                            <div class="row mt-5">
+                            <div class="row mt-4">
                                 <div class="col-sm-12">
                                     <div id="carouselControls" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
@@ -619,11 +652,15 @@
             </div>
         </div>
 
-        <div class="modal fade" id="gettdetails" tabindex="-1" role="dialog" aria-labelledby="melston details" aria-hidden="true">
+        <!-- gett details -->
+        <div class="modal fade" id="gettdetails" tabindex="-1" role="dialog" aria-labelledby="gett details" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white">
-                        <h4 class="modal-title primary-font-bold">Биллинговая система для Gett Россия</h4>
+                        <div>
+                            <h4 class="modal-title primary-font-bold">Биллинговая система для Gett Россия</h4>
+                            <span>#ASP.NET #SQL Server #OpenOffice</span>
+                        </div>
                         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -631,7 +668,7 @@
 
                     <div class="modal-body">
                         <div class="container">
-                            <div class="row mt-5">
+                            <div class="row">
                                 <div class="col-sm-12">
                                     <h4 class="font-weight-bold">Описание проекта</h4>
                                     <p>
@@ -648,7 +685,7 @@
                             <div class="row mt-4">
                                 <div class="col-sm-12">
                                     <h4 class="font-weight-bold">Мой вклад</h4>
-                                    <p>Я реализовал backend на ASP.NET MVC и SQL Server.</p>
+                                    <p>Моей задачей было создание модулей интеграции с системами заказчика, формирования документов различных форматов и доставка их клиентам заказчика, а также система сбора аналитики и построения отчетности.</p>
                                 </div>
                             </div>
                                     
@@ -663,5 +700,194 @@
             </div>        
         </div>
 
+        <!-- zhukov details -->
+        <div class="modal fade" id="zhukovdetails" tabindex="-1" role="dialog" aria-labelledby="zhukov details" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <div>
+                            <h4 class="modal-title primary-font-bold">АСУ для бизнес-центра "1 Zhukov"</h4>
+                            <span>#React-native #Immutable.js #axios #Redux #Saga #Reselect #Expo</span>
+                        </div>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <div id="zhukovCarouselControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0419.PNG" alt="First slide">
+                                                </div>                                             
+                                            </div>                                            
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0416.PNG" alt="First slide">
+                                                </div>                                             
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0417.PNG" alt="Second slide">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0418.PNG" alt="Third slide">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0411.PNG" alt="Third slide">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/zhukov/IMG_0413.PNG" alt="Third slide">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev text-dark" href="#zhukovCarouselControls" role="button" data-slide="prev">
+                                            <i class="fa fa-chevron-left"></i>
+                                        </a>
+                                        <a class="carousel-control-next text-dark" href="#zhukovCarouselControls" role="button" data-slide="next">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-5">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Описание проекта</h4>
+                                    <p>
+                                        Система автоматизирует процесс подачи и обработки заявок арендаторов и посетителей на выдачу гостевых пропусков,
+                                        пропусков на въезд и право на парковочное место, заявок на внос-вынос имущества, а также заявок на производство работ.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Мой вклад</h4>
+                                    <p>
+                                        Моей задачей было создание дизайна по брендбуку заказчика и разработка мобильного приложения под iOS и Android, 
+                                        которое позволяло бы создавать новые заявки на посещение или въезд авто арендаторам бизнес-центра и его посетителям,
+                                        просматривать поданные заявки, с возможностью различных фильтраций/поиска.
+                                    </p>
+                                </div>
+                            </div>
+                                    
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer bg-dark text-white">
+                        <button type="button" class="btn btn-light btn-lg" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        <!-- fensma details -->
+        <div class="modal fade" id="fensmadetails" tabindex="-1" role="dialog" aria-labelledby="fensma details" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <div>
+                            <h4 class="modal-title primary-font-bold">Электронный документооборот для "ООО Фенсма"</h4>
+                            <span>#React-native #Immutable.js #axios #Redux #Saga #Reselect #Onesignal </span>
+                        </div>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Описание проекта</h4>
+                                    <p>
+                                        Решение автоматизирует несколько бизнес-процессов предприятия заказчика, а именно:
+                                        <ul>
+                                            <li>Ведение заявок на поставку ТМЦ</li>
+                                            <li>Складской учет (остатки, накладные и т.д.)</li>
+                                            <li>Планирование и учет произведенных работ</li>
+                                            <li>Ведение реестра договоров</li>
+                                            <li>Согласование счетов на оплату</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Мой вклад</h4>
+                                    <p>
+                                        Моей задачей было создание дизайна по брендбуку заказчика и разработка мобильного приложения под iOS и Android для согласования выставленных счетов на оплату.
+                                        Есть возможности получать уведомления о внесенных изменениях, новых выставленных счетах, 
+                                        просматривать счета и приложенные сканы документов, производить необходимые манипуляции с ними.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer bg-dark text-white">
+                        <button type="button" class="btn btn-light btn-lg" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        <!-- icube details -->
+        <div class="modal fade" id="icubedetails" tabindex="-1" role="dialog" aria-labelledby="icube details" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <div>
+                            <h4 class="modal-title primary-font-bold">АСУ для бизнес-центра iCube</h4>
+                            <span>#React-native #Immutable.js #axios #Redux #Saga #Reselect #Expo </span>
+                        </div>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Описание проекта</h4>
+                                    <p>
+                                        Комплексное решение, которое позволяет автоматизировать управление бизнес-центрами.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Мой вклад</h4>
+                                    <p>
+                                        Моей задачей было создание дизайна по брендбуку заказчика и разработка мобильного приложения под iOS и Android, 
+                                        которое позволяло бы создавать новые заявки на посещение или въезд авто арендаторам бизнес-центра и его посетителям,
+                                        просматривать поданные заявки, с возможностью различных фильтраций/поиска.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer bg-dark text-white">
+                        <button type="button" class="btn btn-light btn-lg" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+        
     </body>
 </html>
