@@ -45,6 +45,10 @@
                         });
                     }
                 });
+
+                $(".project-desc").on("click", function(e){
+                    $(this).toggleClass( "project-desc-active", !$(this).hasClass("project-desc-active") );
+                });  
             });  
 
             (function() {
@@ -61,7 +65,8 @@
                         }, false);
                     });
                 }, false);
-            })();         
+            })(); 
+      
         </script>
 
     </head>
@@ -311,7 +316,7 @@
                             <div class="col-10">
                                 <p class="font-weight-bold text-uppercase">Design</p>
                                 <span>
-                                    Базовые навыки дизайна макетов, работа с Photoshop/Inkscape/Gimp
+                                    Базовые навыки дизайна макетов (Photoshop, Inkscape, Gimp)
                                 </span>
                             </div>
                         </div>
@@ -347,7 +352,7 @@
                                 <img src="./images/azs.jpg" class="img-responsive" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>АСУ СС МЕЛСТОН</h3>
+                                <h3 class="text-center">АСУ СС МЕЛСТОН</h3>
                                 <p class="text-center">Автоматизированная система управления сервисной службой</p>
                                 
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#melstondetails">
@@ -363,7 +368,7 @@
                                 <img src="./images/taxi.jpg" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>Gett БИЛЛИНГ</h3>
+                                <h3 class="text-center">Gett БИЛЛИНГ</h3>
                                 <p class="text-center">Система обработки биллинга для Gett Россия</p>
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#gettdetails">
                                     ПОДРОБНЕЕ
@@ -378,8 +383,8 @@
                                 <img src="./images/zhukov.jpg" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>АСУ БЦ "1 Zhukov"</h3>
-                                <p class="text-center">Система управления заявками на посещение/въезд на территорию бизнес-центра, изготовление пропусков, производство работ</p>
+                                <h3 class="text-center">АСУ БЦ "1 Zhukov"</h3>
+                                <p class="text-center">Управление работой служб ресепшена и КПП бизнес-центра</p>
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#zhukovdetails">
                                     ПОДРОБНЕЕ
                                 </button>
@@ -393,24 +398,9 @@
                                 <img src="./images/fensma.jpg" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>Согласование счетов</h3>
-                                <p class="text-center">Автоматизированная система организации электронного документооборота для компании "ООО Фенсма"</p>
+                                <h3 class="text-center">Согласование счетов</h3>
+                                <p class="text-center">Электронный документооборот для компании "ООО Фенсма"</p>
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#fensmadetails">
-                                    ПОДРОБНЕЕ
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6 my-3 mix mobile" data-bound="" >
-                        <div class="project">
-                            <a href="" class="">
-                                <img src="./images/icube.jpg" alt="">
-                            </a>
-                            <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>АСУ БЦ iCube</h3>
-                                <p class="text-center">Система ведения заявок арендаторов и УК для бизнес-центра iCube</p>
-                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#icubedetails">
                                     ПОДРОБНЕЕ
                                 </button>
                             </div>
@@ -423,8 +413,8 @@
                                 <img src="./images/moscowcity.jpg" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>Claris BC</h3>
-                                <p class="text-center">Автоматизация управления бизнес центрами для организации работы управляющих компаний по заявкам от арендаторов.</p>
+                                <h3 class="text-center">Claris BC</h3>
+                                <p class="text-center">Управление работой управляющих компаний и арендаторов бизнес-центров</p>
                                 <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#clarisbcdetails">
                                     ПОДРОБНЕЕ
                                 </button>
@@ -438,9 +428,9 @@
                                 <img src="./images/saas.jpg" class="img" alt="">
                             </a>
                             <div class="project-desc d-flex flex-column justify-content-center align-items-center">
-                                <h3>Claris</h3>
-                                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sapiente illo maiores?</p>
-                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#icubedetails">
+                                <h3 class="text-center">Claris</h3>
+                                <p class="text-center">Платформа для автоматизации бизнес-процессов предприятия</p>
+                                <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#clarisdetails">
                                     ПОДРОБНЕЕ
                                 </button>
                             </div>
@@ -454,7 +444,7 @@
         <div class="container mb-5" id="contacts">&nbsp;</div>
 
         <!-- Contacts -->
-        <section class="container-fluid my-5 py-5 section-contact">
+        <section class="container-fluid mt-5 py-5 section-contact">
             <div class="container d-flex justify-content-center">
                 <h2 class="primary-font-bold text-uppercase my-5">Контакты</h2>
             </div>
@@ -515,10 +505,8 @@
         </section>
 
         <!-- Copyright-->
-        <section class="container-fluid section-light my-5 py-5">
-            <div class="container">
-                <p>Copyright © 2017 Astro. All Rights Reserved.</p>
-            </div>
+        <section class="container-fluid section-сopyright text-center">
+            <div class="copyright">Copyright © 2017 Astro. All Rights Reserved.</div>
         </section>
 
         <!-- melston details -->
@@ -844,14 +832,14 @@
             </div>        
         </div>
 
-        <!-- icube details -->
-        <div class="modal fade" id="icubedetails" tabindex="-1" role="dialog" aria-labelledby="icube details" aria-hidden="true">
+        <!-- claris bc details -->
+        <div class="modal fade" id="clarisbcdetails" tabindex="-1" role="dialog" aria-labelledby="claris bc details" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-dark text-white">
                         <div>
-                            <h4 class="modal-title primary-font-bold">АСУ для бизнес-центра iCube</h4>
-                            <span>#React-native #Immutable.js #axios #Redux #Saga #Reselect #Expo </span>
+                            <h4 class="modal-title primary-font-bold">Claris. Бизнес-центры</h4>
+                            <span>#React-native #Immutable.js #axios #Redux #Saga #Reselect #Expo #Asp.net Core #NHibernate #Onesignal #React #Material UI #Webpack #ES6 #Bootstrap #jQuery</span>
                         </div>
                         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -864,8 +852,14 @@
                                 <div class="col-sm-12">
                                     <h4 class="font-weight-bold">Описание проекта</h4>
                                     <p>
-                                        Комплексное решение, которое позволяет автоматизировать управление бизнес-центрами.
-
+                                        Автоматизированная система управления бизнес-центрами, которая предназначена для организации работы управляющих компаний по заявкам от арендаторов.
+                                        Основные возможности:
+                                        <ul>
+                                            <li>Заявки на посещение, внос/вынос материальных ценностей, на изготовление пропусков, на производство работ для различных служб управляющей компании</li>
+                                            <li>Учет рабочего времени - фактические затраты по выполнение заявок на производство работ</li>
+                                            <li>Работа с Арендаторами, возможность организовать для них личные кабинеты, где они могут размещать различного вида заявки, видеть историю работы по заявкам</li>
+                                            <li>Разделение доступа к данным. Арендаторы видят только свои заявки и комментарии к ним. Ресепшен видит заявки, которые обрабатываются ими, на КПП видят только свои заявки на текущий день. Тех служба видит заявки на производство работ и т.п.</li>
+                                        </ul>
                                     </p>
                                 </div>
                             </div>
@@ -873,9 +867,7 @@
                                 <div class="col-sm-12">
                                     <h4 class="font-weight-bold">Мой вклад</h4>
                                     <p>
-                                        Моей задачей было создание дизайна по брендбуку заказчика и разработка мобильного приложения под iOS и Android, 
-                                        которое позволяло бы создавать новые заявки на посещение или въезд авто арендаторам бизнес-центра и его посетителям,
-                                        просматривать поданные заявки, с возможностью различных фильтраций/поиска.
+                                        В мои задачи входили участие в разработке backend'a, frontend'a, а также разработка мобильного приложения под iOS и Android по собственному дизайну.
                                     </p>
                                 </div>
                             </div>
@@ -889,5 +881,103 @@
             </div>        
         </div>
         
+        <!-- claris details -->
+        <div class="modal fade" id="clarisdetails" tabindex="-1" role="dialog" aria-labelledby="claris details" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <div>
+                            <h4 class="modal-title primary-font-bold">Оперативное управление предприятием</h4>
+                            <span>#Asp.net #OpenOffice #DCOM #MongoDB #Yandex services #SQL Server #MySQL #Google services #Asterisk #MS Office #Telegam API #CrystalReport  </span>
+                        </div>
+                        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+
+                            <div class="row mt-1">
+                                <div class="col-sm-12">
+                                    <div id="clarisCarouselControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/claris/bc.jpg" alt="First slide">
+                                                </div>                                             
+                                            </div>                                            
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/claris/orders.jpg" alt="First slide">
+                                                </div>                                             
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/claris/tasks.jpg" alt="Second slide">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/claris/task.png" alt="Third slide">
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="d-flex justify-content-center">
+                                                    <img class="d-block melston-carousel-image" src="./projects/claris/documents.jpg" alt="Third slide">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev text-dark" href="#zhukovCarouselControls" role="button" data-slide="prev">
+                                            <i class="fa fa-chevron-left"></i>
+                                        </a>
+                                        <a class="carousel-control-next text-dark" href="#zhukovCarouselControls" role="button" data-slide="next">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Описание проекта</h4>
+                                    <p>
+                                        Комплексное решение для управления бизнес-процессами предприятий и организаций. 
+                                        Система представляет собой большой набор различных конструкторов, которые позволяют на лету адаптировать имеющиеся или создавать новые бизнес-процессы
+                                        (создавать новые таблицы-сущности, настраивать взаимоотношения между ними, представления и окна редактирования, права доступа и многое другое), 
+                                        модулей интеграции со сторонними системами и отчетности.
+                                        
+                                        Основные направления автоматизации:
+                                        <ul>
+                                            <li>Управление сервисной службой (Service Desk)</li>
+                                            <li>CRM - клиенты, продажи, складской учет</li>
+                                            <li>Контроль исполнения поручений: ведение задач, проектов, учет затраченного времени, уведомления, напоминания и т.д.</li>
+                                            <li>Электронный документооборот: входящие, исходящие, внутренние документы, договоры, контрагенты и т.д.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-sm-12">
+                                    <h4 class="font-weight-bold">Мой вклад</h4>
+                                    <p>
+                                        Я участвовал в разработке backend'a системы. 
+                                        В мои задачи входило создание огромного числа модулей системы, в частности написание ядра всей системы, 
+                                        динамической In-memory ORM (для возможности "горячей" модификации структуры таблиц самими клиентами), 
+                                        модулей аналитики и отчетности, интерации с внешними системами, такими как "1С Предприятие", создание 
+                                        биллинговой и других систем. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer bg-dark text-white">
+                        <button type="button" class="btn btn-light btn-lg" data-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
     </body>
 </html>
